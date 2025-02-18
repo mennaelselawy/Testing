@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite [
+        <!ELEMENT suite (test)*>
+        <!ATTLIST suite
+                name CDATA #REQUIRED>
+        <!ELEMENT test (classes)*>
+        <!ATTLIST test
+                name CDATA #REQUIRED>
+        <!ELEMENT classes (class)*>
+        <!ELEMENT class (methods)*>
+        <!ATTLIST class
+                name CDATA #REQUIRED>
+        <!ELEMENT methods (include)*>
+        <!ELEMENT include (#PCDATA)>
+        <!ATTLIST include
+                name CDATA #REQUIRED>
+        ]>
+<suite name="Test Automation University Suite">
+    <test name="Search For A Customer">
+        <classes>
+            <class name="TAU_TestNG.testAnnotations">
+                <methods>
+                    <include name = "searchCustomer"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Configuration Annotation Test -->
+
+    <test name="Search For A Product">
+        <classes>
+            <class name="TAU_TestNG.testAnnotations">
+                <methods>
+                    <include name = "searchProduct"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Configuration Annotation Test -->
+</suite> <!-- Test Automation University Suite -->
